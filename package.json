@@ -9,13 +9,46 @@
   "categories": [
     "Other"
   ],
+  "icon": "images/logo.png",
+  "publisher": "Eric Yang",
+  "author": {
+    "email": "ygweric@163.com",
+    "name": "Eric Yang",
+    "url": "https://github.com/ygweric/vscode-extension-format-all"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ygweric/vscode-extension-format-all",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ygweric/vscode-extension-format-all"
+  },
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "format-all.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "fomat-all.formatAllFiles",
+        "title": "Format All Files by 'Format Document'"
+      },
+      {
+        "command": "fomat-all.saveAllFiles",
+        "title": "Format All Files by 'format on save'"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "fomat-all.formatAllFiles",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "fomat-all.saveAllFiles",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
