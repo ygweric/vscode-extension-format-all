@@ -2,7 +2,7 @@
   "name": "format-all",
   "displayName": "format all",
   "description": "format all files in the specific folder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -10,7 +10,7 @@
     "Other"
   ],
   "icon": "images/logo.png",
-  "publisher": "Eric Yang",
+  "publisher": "ygweric",
   "author": {
     "email": "ygweric@163.com",
     "name": "Eric Yang",
@@ -32,7 +32,7 @@
       },
       {
         "command": "fomat-all.saveAllFiles",
-        "title": "Format All Files by 'format on save'"
+        "title": "Format All Files by 'Format On Save'"
       }
     ],
     "menus": {
